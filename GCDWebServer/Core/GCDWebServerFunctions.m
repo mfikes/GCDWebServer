@@ -53,14 +53,14 @@ void GCDWebServerInitializeFunctions() {
   if (_dateFormatterRFC822 == nil) {
     _dateFormatterRFC822 = [[NSDateFormatter alloc] init];
     _dateFormatterRFC822.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-    _dateFormatterRFC822.dateFormat = @"EEE',' dd MMM yyyy HH':'mm':'ss 'GMT'";
+    _dateFormatterRFC822.dateFormat = @"EEE',' dd MMM yyyy HH':'mm':'ss.SSS 'GMT'";
     _dateFormatterRFC822.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     GWS_DCHECK(_dateFormatterRFC822);
   }
   if (_dateFormatterISO8601 == nil) {
     _dateFormatterISO8601 = [[NSDateFormatter alloc] init];
     _dateFormatterISO8601.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-    _dateFormatterISO8601.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'+00:00'";
+    _dateFormatterISO8601.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSS'+00:00'";
     _dateFormatterISO8601.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     GWS_DCHECK(_dateFormatterISO8601);
   }
